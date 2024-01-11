@@ -1,0 +1,1 @@
+global using Pharmacy.WebUI.Extensions;

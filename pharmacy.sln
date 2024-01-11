@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.DataAccess", "Pharmacy.DataAccess\Pharmacy.DataAccess.csproj", "{83387533-F88D-4ECF-9A66-561B13204880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.Domain", "Pharmacy.Domain\Pharmacy.Domain.csproj", "{B1F535E7-CFC5-49D8-BAD1-C6FA8CDDABD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.WebUI", "Pharmacy.WebUI\Pharmacy.WebUI.csproj", "{6F39F404-981F-4DA5-B837-21807C92F14C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83387533-F88D-4ECF-9A66-561B13204880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83387533-F88D-4ECF-9A66-561B13204880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83387533-F88D-4ECF-9A66-561B13204880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83387533-F88D-4ECF-9A66-561B13204880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1F535E7-CFC5-49D8-BAD1-C6FA8CDDABD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F535E7-CFC5-49D8-BAD1-C6FA8CDDABD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F535E7-CFC5-49D8-BAD1-C6FA8CDDABD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F535E7-CFC5-49D8-BAD1-C6FA8CDDABD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F39F404-981F-4DA5-B837-21807C92F14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F39F404-981F-4DA5-B837-21807C92F14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F39F404-981F-4DA5-B837-21807C92F14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F39F404-981F-4DA5-B837-21807C92F14C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
