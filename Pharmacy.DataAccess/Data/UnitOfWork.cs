@@ -4,6 +4,7 @@ using Pharmacy.Domain.Interfaces;
 using Pharmacy.Domain.Settings;
 
 using Microsoft.Extensions.Options;
+using Pharmacy.DataAccess.Repositories;
 
 namespace Pharmacy.DataAccess.Data;
 
@@ -14,7 +15,10 @@ public class UnitOfWork : IUnitOfWork
     public UnitOfWork(AppDbContext context, IMapper mapper, IOptions<AppSettings> appSettings)
     {
         _context = context;
+        Drugs = new DrugRepository(context, mapper, appSettings);
     }
+
+    public IDrugRepository Drugs { get; private set; }
 
     public async Task<bool> CompleteAsync()
     {
