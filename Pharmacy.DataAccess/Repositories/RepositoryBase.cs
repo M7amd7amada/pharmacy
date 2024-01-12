@@ -73,7 +73,7 @@ public class RepositoryBase<TEntity, TRequest, TResponse>
         return _mapper.Map<PagedResult<TResponse>>(result);
     }
 
-    public async Task<TResponse> GetByIdAsync(Guid id)
+    public async Task<TResponse> GetByIdAsync(int id)
     {
         TEntity entity = await _entities.FindAsync(id)
             ?? throw new KeyNotFoundException($"Entity with id {id} not found.");

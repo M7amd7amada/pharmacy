@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Pharmacy.Domain.DTOs.RequestDTOs;
 using Pharmacy.Domain.DTOs.ResponseDTOs;
 using Pharmacy.Domain.Interfaces;
-using Pharmacy.Domain.Models;
 using Pharmacy.Domain.Settings;
 
 namespace Pharmacy.WebUI.Controllers;
@@ -37,12 +35,25 @@ public class DrugsController : Controller
     }
 
     [HttpGet]
+    public async Task<IActionResult> Show(int id)
+    {
+        try
+        {
+            return View(await _drugs.GetByIdAsync(id));
+        }
+        catch
+        {
+            return NotFound();
+        }
+    }
+
+    [HttpGet]
     public IActionResult Delete()
     {
         return View();
     }
 
-    [HttpPost]
+    [HttpDelete]
     public async Task<IActionResult> Delete(DrugRequestDto request)
     {
         DrugResponseDto deletedDrug = await _drugs.DeleteAsync(request);
@@ -59,7 +70,7 @@ public class DrugsController : Controller
         return View();
     }
 
-    [HttpPost]
+    [HttpPut]
     public async Task<IActionResult> Edit(DrugRequestDto request)
     {
         DrugResponseDto updatedDrug = await _drugs.UpdateAsync(request);

@@ -14,7 +14,7 @@ public interface IRepositoryBase<TEntity, TRequest, TResponse>
         int pageSize,
         Expression<Func<TEntity, object>> orderBy,
         bool isDescending);
-    public Task<TResponse> GetByIdAsync(Guid id);
+    public Task<TResponse> GetByIdAsync(int id);
     public Task<TResponse> DeleteAsync(TRequest request);
     public Task<TResponse> InsertAsync(TRequest request);
     public Task<TResponse> UpdateAsync(TRequest request);
